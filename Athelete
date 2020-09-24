@@ -1,0 +1,15 @@
+from pyKarel import *
+class Athlete(Robot):    #adds new powers to Robot
+    def __init__ (self, w,x=1,y=1,d=north, b=infinity):
+      Robot.__init__(self,w,x,y,d,b) 
+    def turnRight(self):   
+      self.turnLeft()
+      self.turnLeft()
+      self.turnLeft()
+    
+     
+        
+
+    def turnAround(self):
+        self.turnLeft()
+        self.turnLeft()
