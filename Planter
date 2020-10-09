@@ -1,15 +1,15 @@
 class Planter(Athlete):
-     def __init__(self, world,x=2,y=2,d=east,b=0):
+   def __init__(self, world,x=2,y=2,d=east,b=infinity):
       Athlete.__init__(self, world, 2, 2, east, infinity)
        
 def turnToTheNorth(self):
-        while not self.facingNorth():
-            self.turnRight()
+   if not self.facingNorth():
+      self.turnRight()
         
          
 def doYourThing(self):
-      while not self.nextToABeeper():
-         self.putBeeper()
+   while not self.nextToABeeper():
+      self.putBeeper()
 
      
          
