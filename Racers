@@ -1,0 +1,37 @@
+#name: Ashwin Pulla
+#Date: 10/13/2020
+from Athlete import *
+class Racer(Athlete):
+    def __init__(self,world,y):
+       Athlete.__init__(self,world,1,y,east)
+
+    def jumpEast(self):
+        self.turnRight()
+        self.move()
+        self.turnLeft()
+        self.move()
+        self.turnLeft()
+        self.move()
+        self.turnRight()
+
+    def jumpWest(self):
+        self.turnLeft()
+        self.move()
+        self.turnRight()
+        self.move()
+        self.turnRight()
+        self.move()
+        self.turnLeft()
+            
+
+    def sprint(self, n):
+        for x in range(0,n):
+            self.move()
+    
+    def put(self, n):
+        for i in range (0,n):
+            self.putBeeper()
+      
+    def pick(self, n):
+        for i in range (0,n):
+            self.pickBeeper()
