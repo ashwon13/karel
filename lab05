@@ -1,0 +1,55 @@
+#name:Ashwin Pulla
+#Date:10/13/2020
+from pyKarel import *
+from Athlete import *
+from Racers import *
+from threading import Thread
+
+#run th race function
+def runTheRace(arg):
+   arg.move()
+   arg.jumpWest()
+   arg.move()
+   arg.move()
+   while arg.nextToABeeper():
+      arg.pick(1)
+   arg.move()
+   while arg.nextToABeeper():
+      arg.pick(1)
+   arg.move()
+   while arg.nextToABeeper():
+      arg.pick(1)
+   arg.move()
+   arg.move()
+   while arg.nextToABeeper():
+      arg.pick(1)
+   arg.turnAround()
+   while arg.frontIsClear():
+      arg.move()
+   arg.jumpEast()
+   arg.move()
+   for i in range(0,1):
+      arg.put(16)
+   arg.turnAround()
+   arg.move()
+
+
+#main function
+def main():
+   
+   wld=World('shuttle')
+   ralph=Racer(wld,1)
+   oliver=Racer(wld,4)
+   barry=Racer(wld,7)
+   t1=Thread(target=runTheRace,args=(ralph,))
+   t2=Thread(target=runTheRace,args=(oliver,))
+   t3=Thread(target=runTheRace,args=(barry,))
+   t1.start()
+   t2.start()
+   t3.start()
+   
+   wld.mainloop()
+
+
+if __name__=="__main__":
+   main()   
