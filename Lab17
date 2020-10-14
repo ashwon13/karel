@@ -13,3 +13,5 @@ def main():
     second.display();
     # more method calls here
     wld.mainloop();
+if __name__=="__main__":
+   main()
