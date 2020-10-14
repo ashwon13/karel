@@ -1,0 +1,15 @@
+from Digits import *
+from threading import Thread
+
+def display(self):
+    self.showMyDigit()
+
+def main():
+    wld=World(block=25, width=36, height = 10)
+    first = Zero(wld, 1, 9)
+    
+    # more objects here
+    first.display();
+    second.display();
+    # more method calls here
+    wld.mainloop();
