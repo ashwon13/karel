@@ -1,5 +1,3 @@
-#Name:
-#Date:
 
 from Athlete import *
 
@@ -70,21 +68,7 @@ class Digit(Athlete):
    
    def segment7_Off(self):
         self.threeAndTurn(False)
-        
-             
-    
-        
-    
-    
-        
-     
-
-# define more segments, both on and off
-
-
-
-
-##------------------------------------------------        
+ 
 class Zero(Digit):     
     def showMyDigit(self):
         self.segment1_On();
@@ -94,8 +78,6 @@ class Zero(Digit):
         self.segment5_On();
         self.segment6_On();
         self.segment7_Off();
-##------------------------------------------------
-# define other digit classes here
 
 class One(Digit):
     def showMyDigit(self):
